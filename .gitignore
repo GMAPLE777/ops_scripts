@@ -1,0 +1,16 @@
+# 日志文件
+logs/*
+!logs/.gitkeep
+
+# 备份文件
+backup/*
+!backup/.gitkeep
+
+# 临时文件
+*.tmp
+*.swp
+*~
+
+# 敏感配置（如果有的话）
+.env
+*.key
