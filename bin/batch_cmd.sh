@@ -26,14 +26,14 @@ fail=0
 while IFS= read -r host; do
     # 跳过空行和注释
     [[ -z "${host}" || "${host}" =~ ^# ]] && continue
-    ((total++))
+    ((++total))
 
     echo "===== 在 ${host} 上执行命令 ====="
     if ssh -o ConnectTimeout=10 -o StrictHostKeyChecking=no root@"${host}" "${CMD}"; then
-        ((success++))
+        ((++success))
     else
         echo "[ERROR] ${host} 执行失败"
-        ((fail++))
+        ((++fail))
     fi
     echo ""
 done < "${HOST_FILE}"

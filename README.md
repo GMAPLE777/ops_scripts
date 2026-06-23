@@ -86,7 +86,7 @@ crontab -e
 | 配置项 | 默认值 | 说明 |
 |--------|--------|------|
 | DB_USER | root | 数据库用户名 |
-| DB_PASSWORD | your_password | 数据库密码 |
+| DB_PASSWORD | （空，推荐使用 ~/.my.cnf） | 数据库密码 |
 | RETENTION_DAYS | 7 | 备份保留天数 |
 
 ## 常见问题
